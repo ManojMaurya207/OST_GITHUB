@@ -1,0 +1,72 @@
+# FIND AREA OF ANY SHAPE
+Shape=str(input("\nTO FIND THE AREA Of any triangle,type [TRIANGLE] for square type [SQUARE] for rectangle type [RECTANGLE] for circle type [CIRCLE] for sphere type [SPHERE] for cone type [CONE] for cylinder type [CYLINDER] :"))
+
+import math
+#Area of circle
+if Shape=="CIRCLE":
+    pi=3.14
+    r =float(input("\nplease enter the value of radius: "))
+    print("\nThe area of circle is ",math.pi*r*r)
+
+#Area of cylinder 
+elif Shape=="CYLINDER":
+    pi=3.14
+    r =float(input("\nplease enter the value of radius: "))
+    h=float(input("\nplease enter the height of cylinder: "))
+    print("\nThe area of cone is",math.pi*r*r*h)
+
+
+#Area of cone 
+elif Shape=="CONE":
+    pi=3.14
+    r =float(input("\nplease enter the value of radius: "))
+    h=float(input("\nplease enter the height of  cone: "))
+    print("\nThe area of cone is",math.pi*r*r*h*(1/3))
+
+#Area of sphere
+elif Shape=="SPHERE":
+    r=float(input("Enter the value of radius "))
+    pi=3.14
+    print("\n The area of sphere is ",(4/3)*(math.pi*r*r*r))
+
+#Area of rectangle
+elif Shape=="RECTANGLE":
+    l=float(input("\nEnter the length of rectangle: "))
+    b=float(input("Enter the breath of rectangle: "))
+    print("\nThe area of the rectangle is ",l*b)
+
+#Area of square
+elif Shape=="SQUARE":
+    side=float(input("\nEnter the value of side of the square: ",))
+    print("\nthe area of square is ", side*side )
+    
+
+#Area of triangle
+elif Shape=="TRIANGLE":
+    
+    ty=str(input("\nEnter the type of triangle[ right angled [RAT] or 3 sides known [3SK]] or equilateral triangle[ET]: ",))
+    
+    if ty=="RAT":
+        base=float(input("\nEnter the length of base of triangle: ",))
+        height=float(input("\nEnter the height of triangle: ",))
+        print("\nArea of triangle is ",0.5*base*height)
+        
+    if ty=="3SK":
+        a=float(input("\nEnter the value of first side of the triangle: ",))
+        b=float(input("Enter the value of second side of the triangle: ",))
+        c=float(input("Enter the value of third side of the triangle: ",))
+        s=(a+b+c)/2
+        sqra=(s*(s-a)*(s-b)*(s-c))
+        import math
+        print("\nThe area of triangle is ",math.sqrt(sqra))
+        
+    if ty=="ET":
+        f=float(input("\nEnter the side of the triangle: ",))
+        print("\nThe area of triangle is ",0.4330*f*f)
+    
+    else:
+        print("\n\n\tSTART OVER AGAIN PLZ")
+
+        
+else:
+    print("\n\n\t INVALID ENTRY PLZ  'TRY AGAIN' ")
